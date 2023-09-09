@@ -105,12 +105,11 @@ const scroller = document.querySelector('.scroller');
 const episodes = document.querySelector('.episodes');
 const episodeItems = document.querySelectorAll('.episode');
 const episodeWidth = episodeItems[0].offsetWidth;
+const totalEpisodes = episodeItems.length;
 
 let currentIndex = 0;
 
-window.addEventListener('scroll', checkScroll);
-
-function checkScroll() {
+function updateScroll() {
   // Get the current scroll position of the webpage
   const scrollY = window.scrollY || document.documentElement.scrollTop;
 
@@ -118,11 +117,7 @@ function checkScroll() {
   currentIndex = Math.floor(scrollY / episodeWidth);
 
   // Ensure the index is within valid bounds
-  if (currentIndex < 0) {
-    currentIndex = 0;
-  } else if (currentIndex >= episodeItems.length) {
-    currentIndex = episodeItems.length - 1;
-  }
+  currentIndex = Math.max(0, Math.min(currentIndex, totalEpisodes - 1));
 
   // Calculate the offset for the current index
   const offset = -currentIndex * episodeWidth;
@@ -132,4 +127,9 @@ function checkScroll() {
 }
 
 // Initial check to set the correct episode based on the initial scroll position
-checkScroll();
+updateScroll();
+
+// Add a scroll event listener to update the scroll position
+window.addEventListener('scroll', updateScroll);
+
+

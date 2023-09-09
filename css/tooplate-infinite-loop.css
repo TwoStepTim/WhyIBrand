@@ -91,7 +91,7 @@ blockquote {
 
 .navbar-brand {
   color: white;
-  font-size: 1.4rem;
+  font: 1.4rem;
   font-weight: bold;
 }
 
@@ -105,6 +105,7 @@ blockquote {
 }
 
 .nav-item {
+ font: 50px;
   list-style: none;
 }
 
@@ -131,14 +132,14 @@ blockquote {
 
 .scroller {
   position: relative;
-  width: 80%;
-  max-width: 800px;
+  width: auto;
+  max-width: auto;
   overflow: hidden;
 }
 
 .episodes {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 1.5s ease;
 }
 
 .episode {
@@ -156,22 +157,7 @@ blockquote {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.arrows {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
 
-.arrow {
-  width: 30px;
-  height: 30px;
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
 
 .navbar-toggler-icon {
   color: white;
@@ -320,16 +306,42 @@ blockquote {
 /* Testimonials */
 #testimonials {
   color: white;
-  background-image: url(../img/infinite-loop-02.jpg);
+  background-color: #2a344D;
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
 }
-
+#WhyUs{
+  color: white;
+  background-color: #2a344D;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+   margin-bottom: 5vw;
+}
+#Howtoworkwithus{
+  color: white;
+  background-color: #2a344D;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  margin-bottom: 5vw;
+}
+#WhoWeAre{
+  color: white;
+  background-color: #2a344D;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  margin-bottom: 5vw;
+}
 @media (max-width: 991px) {
   #testimonials {
-    background-image: url(../img/infinite-loop-02-mobile.jpg);
+    background-image: url(../img/BlackBackground.png);
   }
 }
 
@@ -566,7 +578,7 @@ figure.effect-honey:hover h2 i {
 #contact {
   color: white;
   background-color: #001828;
-  background-image: url(../img/infinite-loop-03.jpg);
+  background-image: url(../img/BlackBackground.png);
   background-position: center;
   background-repeat: no-repeat;
   min-height: 980px;
